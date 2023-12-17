@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog con Comentarios</title>
+    <!-- /* ... Estilos CSS ... */ -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="post">
+      <h2>Título del Post</h2>
+      <p>Contenido del post...</p>
+    </div>
+
+    <div class="comment-form">
+      <h3>Deja un Comentario</h3>
+      <form class="formulario" id="commentForm">
+        <label for="comment">Comentario:</label>
+        <textarea id="comment" name="comment" rows="4" required></textarea>
+        <br />
+        <input
+        class="boton-publicar"
+          type="button"
+          value="Publicar Comentario"
+          onclick="submitComment()"
+        />
+      </form>
+    </div>
+
+    <div class="comments">
+      <h3>Comentarios Publicados esta semana</h3>
+      <div class="comentarios" id="comentariosContainer">
+        <!-- Aquí se mostrarán los comentarios almacenados -->
+      </div>
+      <button onclick="clearComments()">Borrar Comentarios</button>
+
+      <button onclick="clearLastComment()">Eliminar Último Comentario</button>
+    </div>
+
+    <!-- /* ... JS ... */ -->
+    <script src="/script.js"></script>
+  </body>
+</html>
